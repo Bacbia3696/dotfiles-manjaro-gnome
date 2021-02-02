@@ -1,0 +1,174 @@
+{
+  // for cuda languageserver side
+  /* "languageserver": { */
+  /*   "ccls": { */
+  /*     "command": "ccls", */
+  /*     "filetypes": ["c", "cpp", "cuda", "objc", "objcpp"], */
+  /*     "rootPatterns": [ */
+  /*       ".ccls", */
+  /*       "compile_commands.json", */
+  /*       ".vim/", */
+  /*       ".git/", */
+  /*       ".hg/" */
+  /*     ], */
+  /*     "initializationOptions": { */
+  /*       "cache": { */
+  /*         "directory": "/tmp/ccls" */
+  /*       } */
+  /*     } */
+  /*   } */
+  /* }, */
+  "coc.preferences.floatActions": false,
+  /* "coc.source.emoji.filetypes": ["markdown", "gitcommit"], */
+  /* "suggest.triggerCompletionWait": 50, */
+  /* "suggest.noselect": false, */
+  /* "suggest.maxPreviewWidth": 50, */
+  /* "suggest.labelMaxLength": 50, */
+  /* "suggest.detailMaxLength": 50, */
+  /* "suggest.detailField": "preview", */
+  /* "suggest.triggerAfterInsertEnter": false, */
+  /* "suggest.timeout": 5000, */
+  /* "suggest.echodocSupport": true, */
+  /* "suggest.numberSelect": false, */
+  /* "suggest.enablePreview": true, */
+  /* "suggest.maxCompleteItemCount": 100, */
+  /* "suggest.languageSourcePriority": 100, */
+  /* "suggest.completionItemKindLabels": { */
+  /*   "keyword": "\uf1de", */
+  /*   "variable": "\ue79b", */
+  /*   "value": "\uf89f", */
+  /*   "operator": "\u03a8", */
+  /*   "function": "\u2A15", */
+  /*   "reference": "\ufa46", */
+  /*   "constant": "\uf8fe", */
+  /*   "method": "\uf09a", */
+  /*   "struct": "\ufb44", */
+  /*   "class": "\uf0e8", */
+  /*   "interface": "\uf417", */
+  /*   "text": "\u2663", */
+  /*   "enum": "\uf435", */
+  /*   "enumMember": "\uf02b", */
+  /*   "module": "\uf530", */
+  /*   "color": "\ue22b", */
+  /*   "property": "\ue624", */
+  /*   "field": "\uf6a6", */
+  /*   "unit": "\uf475", */
+  /*   "event": "\ufacd", */
+  /*   "file": "\uf723", */
+  /*   "folder": "\uf114", */
+  /*   "snippet": "\ue60b", */
+  /*   "typeParameter": "\uf728", */
+  /*   "default": "\uf29c" */
+  /* }, */
+  //diagnostic
+  "diagnostic.enable": true,
+  /* "diagnostic.enableSign": false, */
+  /* "diagnostic.errorSign": "☠", */
+  /* "diagnostic.infoSign": "🛈", */
+  /* "diagnostic.warningSign": "⚠", */
+  //coc-list
+  "list.insertMappings": {
+    "<C-v>": "eval:@@",
+    "<C-g>": "feedkeys:\\<ESC>",
+    "<C-n>": "normal:j",
+    "<C-p>": "normal:k"
+  },
+  //python
+  "python.autoComplete.addBrackets": true,
+  "python.jediEnabled": false,
+  "python.pythonPath": "/home/dreamer/.pyenv/versions/nvim/bin/python",
+  "python.formatting.provider": "yapf",
+  //golang
+  "go.goplsPath": "gopls",
+  "go.goplsOptions": {
+    "usePlaceholders": true,
+    "completeUnimported": true,
+    "deepCompletion": true
+  },
+  //Snippets
+  "snippets.priority": 110,
+  /* "coc.preferences.snippetStatusText": "Ⓢ ", */
+  //CocList
+  "list.source.grep.args": ["-S"],
+  "list.source.files.excludePatterns": [
+    "**/.git/**",
+    "**/node_modules/**",
+    "**/build/**"
+  ],
+  /* "list.source.files.defaultOptions": ["--auto-preview"], */
+  /* "list.source.outline.defaultOptions": ["--auto-preview"], */
+  //prettier
+  "coc.preferences.formatOnSaveFiletypes": [
+    "html",
+    "css",
+    "scss",
+    "markdown",
+    "go",
+    "json",
+    "dart"
+  ],
+  /* "prettier.statusItemText": "ⓟ ", */
+  "prettier.singleQuote": true,
+  // "prettier.eslintIntegration": true,
+  //  "prettier.tslintIntegration": false,
+  //  "prettier.stylelintIntegration": true,
+  //  "prettier.disableSuccessMessage": true,
+  //clock
+  "clock.winblend": 50,
+  // coc-explorer
+  "explorer.icon.expanded": "▾",
+  "explorer.width": 35,
+  "explorer.icon.enableNerdfont": true,
+  "explorer.file.showHiddenFiles": true,
+  //emmet
+  "emmet.includeLanguages": {
+    "vue-html": "html",
+    "gohtmltmpl": "html",
+    "htmldjango": "html",
+    "html.handlebars": "html",
+    "jst": "html",
+    "javascriptreact": "javascriptreact",
+    //"javascript": "javascriptreact",
+    "pug": "jade",
+    "javascriptcss": "css"
+  },
+  //"emmet.excludeLanguages": ["markdown", "css", "scss"],
+  "emmet.syntaxProfiles": {
+    "html": {
+      "self_closing_tag": "xhtml"
+      //"filters": "bem"
+    }
+  },
+  "emmet.preferences": {
+    "bem.elementSeparator": "__",
+    "bem.modifierSeparator": "--"
+  },
+  "emmet.extensionsPath": "~/.config/nvim/emmet-config",
+  // yank
+  "yank.enableCompletion": false,
+  // smartf
+  "smartf.timeout": 9999999,
+  "smartf.wordJump": false,
+  //git
+  /* "git.enableGutters": true, */
+  /* "git.branchCharacter": "\uf418", */
+  "git.addGBlameToBufferVar": true,
+  "git.addGBlameToVirtualText": true,
+  "git.virtualTextPrefix": " ❯❯❯ ",
+  "git.addedSign.hlGroup": "GitGutterAdd",
+  "git.changedSign.hlGroup": "GitGutterChange",
+  "git.removedSign.hlGroup": "GitGutterDelete",
+  /* "git.topRemovedSign.hlGroup": "GitGutterDelete", */
+  /* "git.changeRemovedSign.hlGroup": "GitGutterChangeDelete", */
+  /* "git.addedSign.text": "▋", */
+  /* "git.changedSign.text": "▋", */
+  /* "git.removedSign.text": "▋", */
+  /* "git.topRemovedSign.text": "▔", */
+  /* "git.changeRemovedSign.text": "▋" */
+  // java
+  "java.format.settings.url": "/home/dreamer/.config/coc/eclipse-java-google-style.xml",
+  "java.errors.incompleteClasspath.severity": "ignore",
+  // coc import cost
+  "codeLens.enable": true,
+  "javascript.referencesCodeLens.enable": false
+}

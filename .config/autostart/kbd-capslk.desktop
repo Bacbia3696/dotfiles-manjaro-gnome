@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=kbd-capslk
+Exec=kbd-capslk.sh
+Terminal=false
+Categories=kbd
