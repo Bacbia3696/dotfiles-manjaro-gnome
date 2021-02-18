@@ -41,10 +41,7 @@ source $HOME/.config/nvim/plugin-config/undotree.vim
 source $HOME/.config/nvim/plugin-config/vim-latex-live-preview.vim
 source $HOME/.config/nvim/plugin-config/vim-airline.vim
 source $HOME/.config/nvim/plugin-config/vim-rainbow.vim
-" source $HOME/.config/nvim/plugin-config/vim-easy-align.vim
-" source $HOME/.config/nvim/plugin-config/vista.vim
-" source $HOME/.config/nvim/plugin-config/vimtext.vim
-" source $HOME/.config/nvim/plugin-config/vim-closetag.vim
+source $HOME/.config/nvim/plugin-config/vim-closetag.vim
 
 nnoremap <leader>% :MtaJumpToOtherTag<cr>
 

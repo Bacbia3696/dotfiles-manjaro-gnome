@@ -1,4 +1,8 @@
+let g:polyglot_disabled = ['typescript']
+
 call plug#begin('~/.vim/plugged')
+Plug 'leafgarland/typescript-vim'
+
 Plug 'tpope/vim-commentary' " Comment stuff out
 Plug 'tpope/vim-eunuch' " Vim sugar for the UNIX shell commands
 Plug 'tpope/vim-surround' " Surround stuffs
@@ -20,8 +24,7 @@ Plug 'lervag/vimtex' " A modern vim plugin for editing LaTeX files.
 Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' } " A Vim Plugin for Lively Previewing LaTeX PDF Output
 Plug 'voldikss/vim-floaterm' " Use nvim/vim's builtin terminal in the floating/popup window
 Plug 'luochen1990/rainbow' " Rainbow Parentheses Improved, shorter code, no level limit, smooth and fast, powerful configuration.
-Plug 'dylon/vim-antlr' " Syntax highlighter for ANTLR files in vim
-Plug 'junegunn/vim-easy-align' " A simple alignment operator for Vim text editor
+" Plug 'junegunn/vim-easy-align' " A simple alignment operator for Vim text editor
 Plug 'liuchengxu/vista.vim' " Viewer & Finder for LSP symbols and tags 
 Plug 'ludovicchabant/vim-gutentags' " A Vim plugin that manages your tag files
 Plug 'puremourning/vimspector' " A multi language graphical debugger for Vim
@@ -43,6 +46,7 @@ Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'NLKNguyen/papercolor-theme'
 
 " Plug 'liuchengxu/graphviz.vim' " A Vim graphviz plugin
+" Plug 'dylon/vim-antlr' " Syntax highlighter for ANTLR files in vim
 " Plug 'terryma/vim-multiple-cursors'
 " Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'neoclide/jsonc.vim'
@@ -56,4 +60,12 @@ Plug 'KabbAmine/vCoolor.vim' " Simple color selector/picker plugin for Vim
 Plug 'tweekmonster/django-plus.vim'
 
 Plug 'styled-components/vim-styled-components'
+
+
+" Typescript
+" Plug 'pangloss/vim-javascript'
+" Plug 'peitalin/vim-jsx-typescript'
+" Plug 'jparise/vim-graphql'
+" Plug 'maxmellon/vim-jsx-pretty'
+
 call plug#end()

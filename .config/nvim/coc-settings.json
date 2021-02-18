@@ -63,8 +63,8 @@
   //diagnostic
   "diagnostic.enable": true,
   /* "diagnostic.enableSign": false, */
-  /* "diagnostic.errorSign": "☠", */
-  /* "diagnostic.infoSign": "🛈", */
+  /* "diagnostic.errorSign": "🚫", */
+  /* "diagnostic.infoSign": "❗", */
   /* "diagnostic.warningSign": "⚠", */
   //coc-list
   "list.insertMappings": {
@@ -105,7 +105,11 @@
     "markdown",
     "go",
     "json",
-    "dart"
+    "dart",
+    "javascript",
+    "typescript",
+    "javascriptreact",
+    "typescriptreact"
   ],
   /* "prettier.statusItemText": "ⓟ ", */
   "prettier.singleQuote": true,

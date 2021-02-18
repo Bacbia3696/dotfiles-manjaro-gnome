@@ -55,7 +55,6 @@ autocmd BufReadPost *
 " For css
 autocmd FileType css,html,scss setlocal iskeyword+=-
 autocmd FileType css,html,scss setlocal iskeyword+=.
-" autocmd BufReadPost *.scss syntax enable
 
 " Folding
 set foldlevelstart=10
@@ -70,9 +69,8 @@ set splitright
 augroup configgroup
     autocmd!
     autocmd BufRead,BufNewFile *.html,*.xml,*.ejs setlocal ts=2 sw=2
-    autocmd BufRead,BufNewFile *.js,*jsx,*.json,*.ts,*.tsx setlocal ts=2 sw=2
+    autocmd BufRead,BufNewFile *.js,*jsx,*.json,*.ts,*.tsx,*.dart setlocal ts=2 sw=2
     autocmd BufRead,BufNewFile *.c,*.cpp,*.h setlocal ts=2 sw=2
-    " autocmd BufRead,BufNewFile *.js,*jsx,*.json setlocal ts=4 sw=4
     autocmd BufRead,BufNewFile *.css,*.scss setlocal ts=2 sw=2
     autocmd BufRead,BufNewFile *.cu setlocal ts=2 sw=2
     autocmd BufRead,BufNewFile *.sh setlocal ts=2 sw=2
@@ -82,12 +80,12 @@ augroup configgroup
     autocmd BufWritePre *.go :call CocAction('runCommand', 'editor.action.organizeImport')
     autocmd BufRead,BufNewFile *.gohtml set filetype=gohtmltmpl
     autocmd WinNew * highlight KeyWords guibg=yellow guifg=black | match KeyWords /FIXME:.*/
-    " autocmd BufRead,BufNewFile *.vim hi draw guifg=green | match draw /"".*/
-    " autocmd BufEnter * if &buftype == 'terminal' | echom 'lone' | endif
-    " autocmd BufEnter * if &buftype == 'terminal' | :startinsert | endif
     " tsconfig.json is actually jsonc, help TypeScript set the correct filetype
     autocmd BufRead,BufNewFile tsconfig.json set filetype=jsonc
     autocmd BufRead,BufNewFile *.py,*.md setlocal tw=80
+    autocmd BufEnter *.{js,jsx,ts,tsx} :syntax sync fromstart
+    autocmd BufLeave *.{js,jsx,ts,tsx} :syntax sync clear
+
 
 augroup END
 
