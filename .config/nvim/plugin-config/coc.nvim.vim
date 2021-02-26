@@ -1,4 +1,3 @@
-" Some servers have issues with backup files, see #649
 let g:coc_global_extensions= [
     \ 'coc-explorer',
     \ 'coc-git',
@@ -12,7 +11,6 @@ let g:coc_global_extensions= [
     \ 'coc-yaml',
     \ 'coc-yank',
     \ 'coc-actions',
-    \ 'coc-prettier',
     \ 'coc-emoji',
     \ 'coc-terminal',
     \ 'coc-import-cost',
@@ -44,6 +42,7 @@ if isdirectory('./node_modules') && isdirectory('./node_modules/eslint')
   let g:coc_global_extensions += ['coc-eslint']
 endif
 
+" Some servers have issues with backup files, see #649
 set nobackup
 set nowritebackup
 

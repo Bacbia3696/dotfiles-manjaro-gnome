@@ -69,7 +69,8 @@ set splitright
 augroup configgroup
     autocmd!
     autocmd BufRead,BufNewFile *.html,*.xml,*.ejs setlocal ts=2 sw=2
-    autocmd BufRead,BufNewFile *.js,*jsx,*.json,*.ts,*.tsx,*.dart setlocal ts=2 sw=2
+    " autocmd BufRead,BufNewFile *.dart setlocal ts=4 sw=4
+    autocmd BufRead,BufNewFile *.js,*jsx,*.json,*.ts,*.tsx setlocal ts=2 sw=2
     autocmd BufRead,BufNewFile *.c,*.cpp,*.h setlocal ts=2 sw=2
     autocmd BufRead,BufNewFile *.css,*.scss setlocal ts=2 sw=2
     autocmd BufRead,BufNewFile *.cu setlocal ts=2 sw=2
