@@ -169,6 +169,7 @@
   "git.addedSign.hlGroup": "GitGutterAdd",
   "git.changedSign.hlGroup": "GitGutterChange",
   "git.removedSign.hlGroup": "GitGutterDelete",
+  "flutter.UIPath": false,
   /* "git.topRemovedSign.hlGroup": "GitGutterDelete", */
   /* "git.changeRemovedSign.hlGroup": "GitGutterChangeDelete", */
   /* "git.addedSign.text": "▋", */
