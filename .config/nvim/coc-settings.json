@@ -86,7 +86,7 @@
     "deepCompletion": true
   },
   //Snippets
-  "snippets.priority": 110,
+  /* "snippets.priority": 110, */
   /* "coc.preferences.snippetStatusText": "Ⓢ ", */
   //CocList
   "list.source.grep.args": ["-S"],
@@ -104,7 +104,6 @@
     "scss",
     "markdown",
     "go",
-    "json",
     "dart",
     "javascript",
     "typescript",
@@ -169,7 +168,7 @@
   "git.addedSign.hlGroup": "GitGutterAdd",
   "git.changedSign.hlGroup": "GitGutterChange",
   "git.removedSign.hlGroup": "GitGutterDelete",
-  "flutter.UIPath": false,
+  "flutter.runDevToolsAtStartup": true,
   /* "git.topRemovedSign.hlGroup": "GitGutterDelete", */
   /* "git.changeRemovedSign.hlGroup": "GitGutterChangeDelete", */
   /* "git.addedSign.text": "▋", */

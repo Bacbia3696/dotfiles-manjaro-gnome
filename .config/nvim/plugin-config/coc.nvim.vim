@@ -10,7 +10,6 @@ let g:coc_global_extensions= [
     \ 'coc-html',
     \ 'coc-yaml',
     \ 'coc-yank',
-    \ 'coc-actions',
     \ 'coc-emoji',
     \ 'coc-terminal',
     \ 'coc-import-cost',
@@ -118,19 +117,22 @@ command! -nargs=? Fold :call     CocAction('fold', <f-args>)
 
 " use `:OR` for organize import of current buffer
 command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organizeImport')
-" Remap for do codeAction of current line
-nmap <leader>ca  <Plug>(coc-codeaction)
-" Fix autofix problem of current line
-nmap <leader>cF  <Plug>(coc-fix-current)
+
 " Create mappings for function text object, requires document symbols feature of languageserver.
 xmap if <Plug>(coc-funcobj-i)
 xmap af <Plug>(coc-funcobj-a)
 omap if <Plug>(coc-funcobj-i)
 omap af <Plug>(coc-funcobj-a)
 
-" Remap for do codeAction of selected region, ex: `<leader>aap` for current paragraph
-xmap <leader>a  <Plug>(coc-codeaction-selected)<CR>
-nmap <leader>a  <Plug>(coc-codeaction-selected)<CR>
+" Applying codeAction to the selected region.
+" Example: `<leader>aap` for current paragraph
+xmap <leader>a  <Plug>(coc-codeaction-selected)
+nmap <leader>a  <Plug>(coc-codeaction-selected)
+
+" Remap keys for applying codeAction to the current buffer.
+nmap <leader>ac  <Plug>(coc-codeaction)
+" Apply AutoFix to problem on the current line.
+nmap <leader>Q  <Plug>(coc-fix-current)
 
 " Use <tab> for select selections ranges, needs server support, like: coc-tsserver, coc-python
 nmap <silent> <TAB> <Plug>(coc-range-select)
@@ -184,3 +186,6 @@ nnoremap <leader>cs :CocCommand snippets.openSnippetFiles<CR>
 " Remap <C-f> and <C-b> for scroll float windows/popups.
 nnoremap <expr><C-f> coc#util#has_float() ? coc#util#float_scroll(1) : "\<C-f>"
 nnoremap <expr><C-b> coc#util#has_float() ? coc#util#float_scroll(0) : "\<C-b>"
+
+
+autocmd BufRead,BufNewFile *.go call coc#config('snippets', {'priority': v:110})
