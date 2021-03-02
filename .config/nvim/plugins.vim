@@ -1,4 +1,4 @@
-let g:polyglot_disabled = ['typescript']
+let g:polyglot_disabled = ['typescript', 'typescriptreact']
 
 call plug#begin('~/.vim/plugged')
 Plug 'leafgarland/typescript-vim'
@@ -12,7 +12,7 @@ Plug 'tpope/vim-fugitive' " A Git wrapper so awesome, it should be illegal
 Plug 'tpope/vim-projectionist' " Projectionist provides granular project configuration
 Plug 'jiangmiao/auto-pairs' " Insert or delete brackets, parens, quotes in pair
 Plug 'neoclide/coc.nvim', {'branch': 'release'} " Coc is an intellisense engine
-Plug 'sheerun/vim-polyglot' " A collection of language packs for Vim.
+" Plug 'sheerun/vim-polyglot' " A collection of language packs for Vim.
 Plug 'ryanoasis/vim-devicons' " Adds file type icons to Vim plugins
 Plug 'Yggdroot/indentLine' " A vim plugin to display the indention levels with thin vertical lines
 Plug 'chrisbra/nrrwrgn' " A Vim plugin for focussing on a selected region
@@ -67,5 +67,8 @@ Plug 'styled-components/vim-styled-components'
 " Plug 'peitalin/vim-jsx-typescript'
 " Plug 'jparise/vim-graphql'
 " Plug 'maxmellon/vim-jsx-pretty'
+
+Plug 'leafgarland/typescript-vim'
+Plug 'peitalin/vim-jsx-typescript'
 
 call plug#end()

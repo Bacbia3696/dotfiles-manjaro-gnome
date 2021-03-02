@@ -138,6 +138,7 @@
     "html.handlebars": "html",
     "jst": "html",
     "javascriptreact": "javascriptreact",
+    "typescriptreact": "typescriptreact",
     //"javascript": "javascriptreact",
     "pug": "jade",
     "javascriptcss": "css"

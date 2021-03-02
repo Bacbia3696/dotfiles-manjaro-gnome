@@ -86,6 +86,7 @@ augroup configgroup
     autocmd BufRead,BufNewFile *.py,*.md setlocal tw=80
     autocmd BufEnter *.{js,jsx,ts,tsx} :syntax sync fromstart
     autocmd BufLeave *.{js,jsx,ts,tsx} :syntax sync clear
+    autocmd BufNewFile,BufRead *.tsx,*.jsx set filetype=typescriptreact
 
 
 augroup END
