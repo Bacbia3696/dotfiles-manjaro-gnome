@@ -12,7 +12,7 @@ Plug 'tpope/vim-fugitive' " A Git wrapper so awesome, it should be illegal
 Plug 'tpope/vim-projectionist' " Projectionist provides granular project configuration
 Plug 'jiangmiao/auto-pairs' " Insert or delete brackets, parens, quotes in pair
 Plug 'neoclide/coc.nvim', {'branch': 'release'} " Coc is an intellisense engine
-" Plug 'sheerun/vim-polyglot' " A collection of language packs for Vim.
+Plug 'sheerun/vim-polyglot' " A collection of language packs for Vim.
 Plug 'ryanoasis/vim-devicons' " Adds file type icons to Vim plugins
 Plug 'Yggdroot/indentLine' " A vim plugin to display the indention levels with thin vertical lines
 Plug 'chrisbra/nrrwrgn' " A Vim plugin for focussing on a selected region
