@@ -93,6 +93,8 @@
   "list.source.files.excludePatterns": [
     "**/.git/**",
     "**/node_modules/**",
+    "**/anroid/**",
+    "**/ios/**",
     "**/build/**"
   ],
   /* "list.source.files.defaultOptions": ["--auto-preview"], */

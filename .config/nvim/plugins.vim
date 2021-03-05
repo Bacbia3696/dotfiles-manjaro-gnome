@@ -1,7 +1,4 @@
-let g:polyglot_disabled = ['typescript', 'typescriptreact']
-
 call plug#begin('~/.vim/plugged')
-Plug 'leafgarland/typescript-vim'
 
 Plug 'tpope/vim-commentary' " Comment stuff out
 Plug 'tpope/vim-eunuch' " Vim sugar for the UNIX shell commands
@@ -59,7 +56,7 @@ Plug 'KabbAmine/vCoolor.vim' " Simple color selector/picker plugin for Vim
 
 Plug 'tweekmonster/django-plus.vim'
 
-Plug 'styled-components/vim-styled-components'
+Plug 'styled-components/vim-styled-components', {'branch':'develop'}
 
 
 " Typescript

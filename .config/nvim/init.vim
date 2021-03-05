@@ -49,3 +49,4 @@ nnoremap <leader>% :MtaJumpToOtherTag<cr>
 nnoremap <leader>p Y}pA<BS>{<cr>}<esc>k$i
 
 autocmd BufRead,BufNewFile *.styles.jsx setlocal ft=javascriptcss | setlocal syntax=javascriptreact
+
