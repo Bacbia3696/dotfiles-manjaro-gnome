@@ -70,6 +70,7 @@ inoremap <M-j> <ESC>gTa
 inoremap <M-k> <ESC>gta
 
 nnoremap <C-q> :confirm q<CR>
+inoremap <C-q> <ESC>:confirm q<CR>
 
 " Delete in visual mode
 vnoremap <leader>d "_d

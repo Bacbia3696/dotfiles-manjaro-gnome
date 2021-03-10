@@ -16,6 +16,7 @@ let g:coc_global_extensions= [
     \ 'coc-docker',
     \ 'coc-webpack',
     \ 'coc-highlight',
+    \ 'coc-floatinput',
     \ 'coc-flutter-tools',
     \ 'coc-sql',
     \ 'coc-go',
@@ -41,6 +42,9 @@ if isdirectory('./node_modules') && isdirectory('./node_modules/eslint')
   let g:coc_global_extensions += ['coc-eslint']
 endif
 
+" TextEdit might fail if hidden is not set.
+set hidden
+
 " Some servers have issues with backup files, see #649
 set nobackup
 set nowritebackup
@@ -51,8 +55,14 @@ set updatetime=300
 " don't give |ins-completion-menu| messages.
 set shortmess+=c
 
-" always show signcolumns
-" set signcolumn=yes
+" Always show the signcolumn, otherwise it would shift the text each time
+" diagnostics appear/become resolved.
+if has("patch-8.1.1564")
+  " Recently vim can merge signcolumn and number column into one
+  set signcolumn=number
+else
+  set signcolumn=yes
+endif
 
 " Use `[g` and `]g` to navigate diagnostics
 nmap <silent> [g <Plug>(coc-diagnostic-prev)
@@ -86,7 +96,7 @@ inoremap <C-y> <C-n><C-p><ESC>a
 " Highlight comment json
 autocmd FileType json syntax match Comment +\/\/.\+$+
 
-" Remap keys for gotos
+" GoTo code navigation.
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
@@ -183,9 +193,4 @@ nnoremap <leader>cc :CocCommand<CR>
 nnoremap <leader>cf :CocConfig<CR>
 nnoremap <leader>cs :CocCommand snippets.openSnippetFiles<CR>
 
-" Remap <C-f> and <C-b> for scroll float windows/popups.
-nnoremap <expr><C-f> coc#util#has_float() ? coc#util#float_scroll(1) : "\<C-f>"
-nnoremap <expr><C-b> coc#util#has_float() ? coc#util#float_scroll(0) : "\<C-b>"
-
-
-autocmd BufRead,BufNewFile *.go call coc#config('snippets', {'priority': v:110})
+autocmd BufRead,BufNewFile *.go call coc#config('snippets', {'priority': 110})

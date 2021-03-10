@@ -184,5 +184,5 @@
   "java.errors.incompleteClasspath.severity": "ignore",
   // coc import cost
   "codeLens.enable": true,
-  "javascript.referencesCodeLens.enable": false
+  "javascript.referencesCodeLens.enable": false,
 }

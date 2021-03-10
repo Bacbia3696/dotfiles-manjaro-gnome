@@ -78,7 +78,6 @@ augroup configgroup
     autocmd BufRead,BufNewFile Makefile setlocal noexpandtab
     autocmd BufRead,BufNewFile .gitconfig setlocal noexpandtab
     autocmd BufRead,BufNewFile *.go setlocal noexpandtab
-    autocmd BufWritePre *.go :call CocAction('runCommand', 'editor.action.organizeImport')
     autocmd BufRead,BufNewFile *.gohtml set filetype=gohtmltmpl
     autocmd WinNew * highlight KeyWords guibg=yellow guifg=black | match KeyWords /FIXME:.*/
     " tsconfig.json is actually jsonc, help TypeScript set the correct filetype
