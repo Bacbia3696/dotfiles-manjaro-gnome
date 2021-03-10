@@ -86,6 +86,8 @@ augroup configgroup
     autocmd BufEnter *.{js,jsx,ts,tsx} :syntax sync fromstart
     autocmd BufLeave *.{js,jsx,ts,tsx} :syntax sync clear
     " autocmd BufNewFile,BufRead *.tsx set filetype=typescriptreact
+    " server need sometime for synchronize buffer change
+    autocmd BufWritePre *.ts,*.js,*.go :call CocAction('runCommand', 'editor.action.organizeImport') | sleep 100m
 
 
 augroup END
