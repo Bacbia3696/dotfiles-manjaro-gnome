@@ -36,12 +36,8 @@ source $HOME/.config/nvim/functions.vim
 
 " Plugins config
 source $HOME/.config/nvim/plugin-config/coc.nvim.vim
-source $HOME/.config/nvim/plugin-config/auto-pairs.vim
-source $HOME/.config/nvim/plugin-config/undotree.vim
-source $HOME/.config/nvim/plugin-config/vim-latex-live-preview.vim
 source $HOME/.config/nvim/plugin-config/vim-airline.vim
-source $HOME/.config/nvim/plugin-config/vim-rainbow.vim
-source $HOME/.config/nvim/plugin-config/vim-closetag.vim
+source $HOME/.config/nvim/plugin-config/all-plugins.vim
 
 nnoremap <leader>% :MtaJumpToOtherTag<cr>
 
