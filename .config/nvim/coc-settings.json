@@ -139,6 +139,7 @@
     "htmldjango": "html",
     "html.handlebars": "html",
     "jst": "html",
+    "template": "html",
     "javascriptreact": "javascriptreact",
     "typescriptreact": "typescriptreact",
     //"javascript": "javascriptreact",

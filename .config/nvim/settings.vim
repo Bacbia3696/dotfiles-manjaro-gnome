@@ -78,7 +78,7 @@ augroup configgroup
     autocmd BufRead,BufNewFile Makefile setlocal noexpandtab
     autocmd BufRead,BufNewFile .gitconfig setlocal noexpandtab
     autocmd BufRead,BufNewFile *.go setlocal noexpandtab
-    autocmd BufRead,BufNewFile *.gohtml set filetype=gohtmltmpl
+    autocmd BufRead,BufNewFile *.gohtml,*.tmpl set filetype=gohtmltmpl
     autocmd WinNew * highlight KeyWords guibg=yellow guifg=black | match KeyWords /FIXME:.*/
     " tsconfig.json is actually jsonc, help TypeScript set the correct filetype
     autocmd BufRead,BufNewFile tsconfig.json set filetype=jsonc
@@ -86,8 +86,8 @@ augroup configgroup
     autocmd BufEnter *.{js,jsx,ts,tsx} :syntax sync fromstart
     autocmd BufLeave *.{js,jsx,ts,tsx} :syntax sync clear
     " autocmd BufNewFile,BufRead *.tsx set filetype=typescriptreact
-    " server need sometime for synchronize buffer change
-    autocmd BufWritePre *.ts,*.js,*.go :call CocAction('runCommand', 'editor.action.organizeImport') | sleep 100m
+    " autocmd BufWritePre *.ts,*.js :OR
+    autocmd BufWritePre *.go :OR
 
 
 augroup END

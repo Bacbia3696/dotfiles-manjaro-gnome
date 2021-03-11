@@ -59,8 +59,8 @@ nnoremap <M-t> :tabnew<CR>
 " for i in range(0,9) | execute 'noremap <M-'.i.'> '.i.'gt' | endfor
 " for i in range(0,9) | execute 'inoremap <M-'.i.'> <ESC>'.i.'gta' | endfor
 for i in range(0,9) | execute 'noremap <silent> <M-'.i.'> :'.i."wincmd w<cr>" | endfor
-for i in range(0,9) | execute 'inoremap <silent> <M-'.i.'> <ESC>:'.i."wincmd w<cr>a" | endfor
-for i in range(0,9) | execute 'tnoremap <silent> <M-'.i.'> <C-\><C-n>:'.i."wincmd w<cr>a" | endfor
+for i in range(0,9) | execute 'inoremap <silent> <M-'.i.'> <ESC>:'.i."wincmd w<cr>" | endfor
+for i in range(0,9) | execute 'tnoremap <silent> <M-'.i.'> <C-\><C-n>:'.i."wincmd w<cr>" | endfor
 
 for i in range(0,9) | execute 'noremap <leader>'.i.' '.i.'gt' | endfor
 

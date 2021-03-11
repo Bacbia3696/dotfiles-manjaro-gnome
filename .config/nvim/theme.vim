@@ -4,7 +4,7 @@
 "↵,→,~,↷,↶,·,¬,⇨,⋄,‸,⇥,➜,⟫,➪,➭
 " set listchars=eol:¬,tab:➪\·,trail:⋄,space:˽
 " set listchars=eol:¬,tab:➪\⸱,trail:⋄
-set listchars=eol:⮐,tab:➪\ ,trail:⚬
+set listchars=eol:⮐,tab:➜\ ,trail:⚬
 set list
 
 set termguicolors " add more colors to display
@@ -42,3 +42,5 @@ let g:airline_theme = 'dark'
 " colorscheme molokai
 
 " colorscheme PaperColor
+
+match SrceryXgray6 /	/
