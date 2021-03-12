@@ -43,4 +43,4 @@ let g:airline_theme = 'dark'
 
 " colorscheme PaperColor
 
-match SrceryXgray6 /	/
+autocmd BufEnter * match SrceryXgray6 /	/

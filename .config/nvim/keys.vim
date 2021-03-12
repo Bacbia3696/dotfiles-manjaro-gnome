@@ -9,6 +9,8 @@ noremap! <M-BS> <C-w>
 noremap! <M-f> <C-Right>
 noremap! <M-b> <C-Left>
 inoremap <M-d> <ESC>lcw
+" inoremap <C-j> <ESC>o
+" vnoremap <C-j> <ESC>o
 inoremap <C-d> <Del>
 inoremap <C-k> <C-o>D
 vnoremap <C-g> <C-c>
