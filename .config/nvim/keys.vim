@@ -30,17 +30,17 @@ let mapleader="\<Space>"
 nnoremap <silent> <leader>fs :w<CR>
 nnoremap <silent> <leader>fS :wa<CR>
 
-nnoremap <C-s> mm:silent exec ":Format"<CR> <bar> :w<CR>`m
-inoremap <C-s> <ESC>mm:silent exec ":Format"<CR> <bar> :w<CR>`m
+" nnoremap <C-s> mm:silent exec ":Format"<CR> <bar> :w<CR>`m
+" inoremap <C-s> <ESC>mm:silent exec ":Format"<CR> <bar> :w<CR>`m
+nnoremap <silent> <C-s> mm:silent! exec "Format" <bar> w <bar> silent! exec "normal `m"<CR>
+inoremap <silent> <C-s> <ESC>mm:silent! exec "Format" <bar> w <bar> silent! exec "normal `m"<CR>
 " edit config file
 nnoremap <leader>vf :e $MYVIMRC<CR>
 nnoremap <leader>vs :source $MYVIMRC<CR>:PlugInstall<CR>
 " clear search
 nnoremap <leader><leader> :nohl<CR>
 nnoremap <leader>q :confirm qa<CR>
-" save
-nnoremap <F3> :Format<CR>
-inoremap <F3> <ESC>:Format<CR>
+
 " quit terminal
 " tnoremap <Esc> <C-\><C-n>
 " high light last past

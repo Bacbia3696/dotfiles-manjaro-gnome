@@ -20,7 +20,6 @@
   /* }, */
   "coc.preferences.floatActions": false,
   /* "coc.source.emoji.filetypes": ["markdown", "gitcommit"], */
-  // This will insert text, really annoying
   "suggest.noselect": true,
   "suggest.triggerCompletionWait": 50,
   "suggest.maxPreviewWidth": 50,

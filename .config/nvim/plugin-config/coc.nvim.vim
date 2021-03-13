@@ -117,13 +117,13 @@ autocmd CursorHold * silent call CocActionAsync('highlight')
 nmap <leader>cr <Plug>(coc-rename)
 
 " Use `:Format` to format current buffer
-command! -nargs=0 Format :call CocAction('format')
+command! -nargs=0 Format :silent! exec "call CocAction('format')"
 
 " Use `:Fold` to fold current buffer
 command! -nargs=? Fold :call     CocAction('fold', <f-args>)
 
 " use `:OR` for organize import of current buffer
-command! -nargs=0 OR :silent exec "call CocAction('runCommand', 'editor.action.organizeImport')"
+command! -nargs=0 OR :silent! exec "call CocAction('runCommand', 'editor.action.organizeImport')"
 
 " Create mappings for function text object, requires document symbols feature of languageserver.
 xmap if <Plug>(coc-funcobj-i)

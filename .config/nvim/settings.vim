@@ -80,14 +80,15 @@ augroup configgroup
     autocmd BufRead,BufNewFile *.go setlocal noexpandtab
     autocmd BufRead,BufNewFile *.gohtml,*.tmpl set filetype=gohtmltmpl
     autocmd WinNew * highlight KeyWords guibg=yellow guifg=black | match KeyWords /FIXME:.*/
-    " tsconfig.json is actually jsonc, help TypeScript set the correct filetype
     autocmd BufRead,BufNewFile tsconfig.json set filetype=jsonc
     autocmd BufRead,BufNewFile *.py,*.md setlocal tw=80
     autocmd BufEnter *.{js,jsx,ts,tsx} :syntax sync fromstart
     autocmd BufLeave *.{js,jsx,ts,tsx} :syntax sync clear
+    autocmd BufWritePre *.go :OR
+
     " autocmd BufNewFile,BufRead *.tsx set filetype=typescriptreact
     " autocmd BufWritePre *.ts,*.js :OR
-    autocmd BufWritePre *.go :OR
+    " tsconfig.json is actually jsonc, help TypeScript set the correct filetype
 
 
 augroup END
@@ -98,9 +99,5 @@ augroup rungroup
     autocmd BufRead,BufNewFile *.js nnoremap <F5> :exec '!node' shellescape(@%, 1)<cr>
     autocmd BufRead,BufNewFile *.py nnoremap <F5> :exec '!python' shellescape(@%, 1)<cr>
     autocmd BufRead,BufNewFile *.tex nnoremap <F5> :exec '!pdflatex' shellescape(@%, 1)<cr>
-    autocmd BufRead,BufNewFile *.jl nnoremap <F5> :exec '!julia' shellescape(@%, 1)<cr>
-    autocmd BufRead,BufNewFile *.lisp nnoremap <F5> :exec '!ros' shellescape(@%, 1)<cr>
     autocmd BufRead,BufNewFile *.vim nnoremap <F5> :source %<cr>
-
 augroup END
-" 
