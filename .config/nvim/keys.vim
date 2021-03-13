@@ -29,13 +29,12 @@ let mapleader="\<Space>"
 " Spacemacs like
 nnoremap <silent> <leader>fs :w<CR>
 nnoremap <silent> <leader>fS :wa<CR>
-" nnoremap <silent> <leader><leader> :Format<CR>:w<CR>
-" nnoremap <silent> <C-s> :Format<CR>:w<CR>
-" inoremap <silent> <C-s> <ESC>:Format<CR>:w<CR>
-" vnoremap <silent> <C-s> <ESC>:Format<CR>:w<CR>
-nnoremap <silent> <C-s> :w<CR>
-inoremap <silent> <C-s> <ESC>:w<CR>
-vnoremap <silent> <C-s> <ESC>:w<CR>
+
+nnoremap <C-s> :silent exec ":Format"<CR> <bar> :w<CR>
+inoremap <C-s> <ESC>:silent exec ":Format"<CR> <bar> :w<CR>
+" nnoremap <silent> <C-s> :w<CR>
+" inoremap <silent> <C-s> <ESC>:w<CR>
+" vnoremap <silent> <C-s> <ESC>:w<CR>
 " edit config file
 nnoremap <leader>vf :e $MYVIMRC<CR>
 nnoremap <leader>vs :source $MYVIMRC<CR>:PlugInstall<CR>
@@ -49,11 +48,6 @@ inoremap <F3> <ESC>:Format<CR>
 " tnoremap <Esc> <C-\><C-n>
 " high light last past
 nnoremap <leader>p `[v`]
-" fast change to normal mode
-" inoremap jk <ESC>
-" snoremap jk <ESC>
-" inoremap kj <ESC>
-" snoremap kj <ESC>
 " Create new tab, alt-number to change tab
 nnoremap <M-t> :tabnew<CR>
 " for i in range(0,9) | execute 'noremap <M-'.i.'> '.i.'gt' | endfor

@@ -99,19 +99,19 @@
   /* "list.source.files.defaultOptions": ["--auto-preview"], */
   /* "list.source.outline.defaultOptions": ["--auto-preview"], */
   //prettier
-  "coc.preferences.formatOnSaveFiletypes": [
-    "html",
-    "css",
-    "scss",
-    "markdown",
-    "go",
-    "dart",
-    "javascript",
-    "typescript",
-    "javascriptreact",
-    "typescriptreact",
-    "sql"
-  ],
+  /* "coc.preferences.formatOnSaveFiletypes": [ */
+  /*   "html", */
+  /*   "css", */
+  /*   "scss", */
+  /*   "markdown", */
+  /*   "go", */
+  /*   "dart", */
+  /*   "javascript", */
+  /*   "typescript", */
+  /*   "javascriptreact", */
+  /*   "typescriptreact", */
+  /*   "sql" */
+  /* ], */
   "sql.formatOptions": {
     "language": "postgresql",
     "uppercase": true,
