@@ -30,11 +30,8 @@ let mapleader="\<Space>"
 nnoremap <silent> <leader>fs :w<CR>
 nnoremap <silent> <leader>fS :wa<CR>
 
-nnoremap <C-s> :silent exec ":Format"<CR> <bar> :w<CR>
-inoremap <C-s> <ESC>:silent exec ":Format"<CR> <bar> :w<CR>
-" nnoremap <silent> <C-s> :w<CR>
-" inoremap <silent> <C-s> <ESC>:w<CR>
-" vnoremap <silent> <C-s> <ESC>:w<CR>
+nnoremap <C-s> mm:silent exec ":Format"<CR> <bar> :w<CR>`m
+inoremap <C-s> <ESC>mm:silent exec ":Format"<CR> <bar> :w<CR>`m
 " edit config file
 nnoremap <leader>vf :e $MYVIMRC<CR>
 nnoremap <leader>vs :source $MYVIMRC<CR>:PlugInstall<CR>
@@ -50,8 +47,6 @@ inoremap <F3> <ESC>:Format<CR>
 nnoremap <leader>p `[v`]
 " Create new tab, alt-number to change tab
 nnoremap <M-t> :tabnew<CR>
-" for i in range(0,9) | execute 'noremap <M-'.i.'> '.i.'gt' | endfor
-" for i in range(0,9) | execute 'inoremap <M-'.i.'> <ESC>'.i.'gta' | endfor
 for i in range(0,9) | execute 'noremap <silent> <M-'.i.'> :'.i."wincmd w<cr>" | endfor
 for i in range(0,9) | execute 'inoremap <silent> <M-'.i.'> <ESC>:'.i."wincmd w<cr>" | endfor
 for i in range(0,9) | execute 'tnoremap <silent> <M-'.i.'> <C-\><C-n>:'.i."wincmd w<cr>" | endfor

@@ -177,11 +177,10 @@ tnoremap <C-q> <C-\><C-n><ESC>
 " Coc list
 nnoremap <leader>l :CocList<CR>
 nnoremap <leader>e :CocList extensions<CR>
-nnoremap <leader>ff :CocList files<CR>
-nnoremap <leader>fr :CocList mru<CR>
+nnoremap <leader>f :CocList files<CR>
 nnoremap <leader>m :CocList marketplace<CR>
 nnoremap <leader>d :CocList diagnostics<CR>
-nnoremap <leader>bb :CocList buffers<CR>
+nnoremap <leader>b :CocList buffers<CR>
 nnoremap <leader>g :CocList grep<CR>
 nnoremap <leader>y :CocList yank<CR>
 nnoremap <leader>p `[v`]

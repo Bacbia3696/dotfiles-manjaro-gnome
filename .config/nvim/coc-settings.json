@@ -20,19 +20,18 @@
   /* }, */
   "coc.preferences.floatActions": false,
   /* "coc.source.emoji.filetypes": ["markdown", "gitcommit"], */
-  /* "suggest.triggerCompletionWait": 50, */
-  /* "suggest.noselect": false, */
-  /* "suggest.maxPreviewWidth": 50, */
-  /* "suggest.labelMaxLength": 50, */
-  /* "suggest.detailMaxLength": 50, */
-  /* "suggest.detailField": "preview", */
-  /* "suggest.timeout": 5000, */
-  /* "suggest.echodocSupport": true, */
-  /* "suggest.numberSelect": false, */
-  /* "suggest.enablePreview": true, */
-  /* "suggest.maxCompleteItemCount": 100, */
-  /* "suggest.languageSourcePriority": 100, */
-  "suggest.noselect": false,
+  // This will insert text, really annoying
+  "suggest.noselect": true,
+  "suggest.triggerCompletionWait": 50,
+  "suggest.maxPreviewWidth": 50,
+  "suggest.labelMaxLength": 50,
+  "suggest.detailMaxLength": 50,
+  "suggest.detailField": "preview",
+  "suggest.timeout": 5000,
+  "suggest.echodocSupport": true,
+  "suggest.numberSelect": false,
+  "suggest.enablePreview": true,
+  "suggest.maxCompleteItemCount": 100,
   "suggest.completionItemKindLabels": {
     "keyword": "\uf1de",
     "variable": "\ue79b",
@@ -84,8 +83,6 @@
   /*   "completeUnimported": true, */
   /*   "deepCompletion": true */
   /* }, */
-  //Snippets
-  /* "snippets.priority": 110, */
   /* "coc.preferences.snippetStatusText": "Ⓢ ", */
   //CocList
   "list.source.grep.args": ["-S"],
@@ -185,5 +182,5 @@
   // coc import cost
   "codeLens.enable": true,
   "javascript.referencesCodeLens.enable": false,
-  "git.enableGutters": true,
+  "git.enableGutters": true
 }
