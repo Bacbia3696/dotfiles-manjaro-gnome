@@ -26,6 +26,7 @@ hi MatchParen cterm=bold ctermfg=233 ctermbg=208 gui=bold guifg=#ffbb88 guibg=#5
 " Fix highlight color for popup with srcery them
 hi SrceryXGray3 guifg=#909090
 let g:airline_theme = 'dark'
+autocmd BufEnter * match SrceryXgray6 /	/
 
 
 """""""""""""""""OceanicNext"""""""""""""""""
@@ -42,5 +43,3 @@ let g:airline_theme = 'dark'
 " colorscheme molokai
 
 " colorscheme PaperColor
-
-autocmd BufEnter * match SrceryXgray6 /	/

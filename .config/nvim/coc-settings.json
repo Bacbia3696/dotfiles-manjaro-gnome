@@ -79,12 +79,11 @@
   "python.pythonPath": "/home/dreamer/.pyenv/versions/nvim/bin/python",
   "python.formatting.provider": "yapf",
   //golang
-  "go.goplsPath": "gopls",
-  "go.goplsOptions": {
-    "usePlaceholders": true,
-    "completeUnimported": true,
-    "deepCompletion": true
-  },
+  /* "go.goplsOptions": { */
+  /*   "usePlaceholders": true, */
+  /*   "completeUnimported": true, */
+  /*   "deepCompletion": true */
+  /* }, */
   //Snippets
   /* "snippets.priority": 110, */
   /* "coc.preferences.snippetStatusText": "Ⓢ ", */
@@ -186,4 +185,5 @@
   // coc import cost
   "codeLens.enable": true,
   "javascript.referencesCodeLens.enable": false,
+  "git.enableGutters": true,
 }
