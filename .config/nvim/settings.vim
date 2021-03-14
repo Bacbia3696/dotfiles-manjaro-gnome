@@ -56,6 +56,10 @@ autocmd BufReadPost *
 autocmd FileType css,html,scss setlocal iskeyword+=-
 autocmd FileType css,html,scss setlocal iskeyword+=.
 
+" Highlight comment json
+autocmd FileType json syntax match Comment +\/\/.\+$+
+
+
 " Folding
 set foldlevelstart=10
 set foldnestmax=10

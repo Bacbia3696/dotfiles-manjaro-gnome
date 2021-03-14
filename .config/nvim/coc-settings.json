@@ -20,7 +20,7 @@
   /* }, */
   "coc.preferences.floatActions": false,
   /* "coc.source.emoji.filetypes": ["markdown", "gitcommit"], */
-  "suggest.noselect": true,
+  "suggest.noselect": false,
   "suggest.triggerCompletionWait": 50,
   "suggest.maxPreviewWidth": 50,
   "suggest.labelMaxLength": 50,
