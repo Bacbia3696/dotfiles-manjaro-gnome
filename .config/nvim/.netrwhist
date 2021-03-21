@@ -1,5 +1,7 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =6
+let g:netrw_dirhistcnt =8
+let g:netrw_dirhist_8='/home/dreamer/playground/golang'
+let g:netrw_dirhist_7='/home/dreamer/work/gpp_api/database'
 let g:netrw_dirhist_6='/home/dreamer/work/sphacy_gppweb/src/exports'
 let g:netrw_dirhist_5='/home/dreamer/work/sphacy_gppweb/src/exports/pdf'
 let g:netrw_dirhist_4='/home/dreamer/.vim/plugged/auto-pairs'

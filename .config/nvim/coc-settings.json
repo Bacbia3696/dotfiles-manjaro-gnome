@@ -20,7 +20,7 @@
   /* }, */
   "coc.preferences.floatActions": false,
   /* "coc.source.emoji.filetypes": ["markdown", "gitcommit"], */
-  "suggest.noselect": false,
+  "suggest.noselect": true,
   "suggest.triggerCompletionWait": 50,
   "suggest.maxPreviewWidth": 50,
   "suggest.labelMaxLength": 50,
@@ -90,7 +90,8 @@
     "**/node_modules/**",
     "**/anroid/**",
     "**/ios/**",
-    "**/build/**"
+    "**/build/**",
+    "**/tmp/**"
   ],
   /* "list.source.files.defaultOptions": ["--auto-preview"], */
   /* "list.source.outline.defaultOptions": ["--auto-preview"], */
