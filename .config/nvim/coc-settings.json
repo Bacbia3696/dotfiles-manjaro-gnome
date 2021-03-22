@@ -122,7 +122,7 @@
   //  "prettier.stylelintIntegration": true,
   //  "prettier.disableSuccessMessage": true,
   //clock
-  "clock.winblend": 50,
+  "clock.winblend": 0,
   // coc-explorer
   "explorer.icon.expanded": "▾",
   "explorer.width": 35,
@@ -182,5 +182,26 @@
   // coc import cost
   "codeLens.enable": true,
   "javascript.referencesCodeLens.enable": false,
-  "git.enableGutters": true
+  "git.enableGutters": true,
+  "explorer.icon.customIcons": {
+    "icons": {
+      "gotmpl": {
+        "code": "",
+        "color": "#00FFFF"
+      },
+      "node_modules": {
+        "code": "",
+        "color": "#0EC164"
+      }
+    },
+    "extensions": {
+      "tmpl": "gotmpl"
+    },
+    "filenames": {},
+    "dirnames": {
+      "node_modules": "node_modules"
+    },
+    "patternMatches": {},
+    "dirPatternMatches": {}
+  }
 }
