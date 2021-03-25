@@ -66,7 +66,7 @@
   /* "diagnostic.warningSign": "⚠", */
   //coc-list
   "list.insertMappings": {
-    "<C-v>": "eval:@@",
+    "<C-v>": "eval:@+",
     "<C-g>": "feedkeys:\\<ESC>",
     "<C-n>": "normal:j",
     "<C-p>": "normal:k"
@@ -183,11 +183,12 @@
   "codeLens.enable": true,
   "javascript.referencesCodeLens.enable": false,
   "git.enableGutters": true,
+  "clock.color": "#00ffff",
   "explorer.icon.customIcons": {
     "icons": {
-      "gotmpl": {
-        "code": "",
-        "color": "#00FFFF"
+      "htmltmpl": {
+        "code": "",
+        "color": "#FF8E63"
       },
       "node_modules": {
         "code": "",
@@ -195,7 +196,7 @@
       }
     },
     "extensions": {
-      "tmpl": "gotmpl"
+      "tmpl": "htmltmpl"
     },
     "filenames": {},
     "dirnames": {

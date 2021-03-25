@@ -157,7 +157,7 @@ nnoremap <leader>cc :CocCommand<CR>
 nnoremap <leader>cf :CocConfig<CR>
 nnoremap <leader>cs :CocCommand snippets.openSnippetFiles<CR>
 
-autocmd BufRead,BufNewFile *.go call coc#config('suggest', {'languageSourcePriority': 89})
+autocmd BufRead,BufNewFile *.go call coc#config('suggest', {'languageSourcePriority': 50})
 
 
 
