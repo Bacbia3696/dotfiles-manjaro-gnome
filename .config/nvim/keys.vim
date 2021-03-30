@@ -22,13 +22,14 @@ noremap! <C-x><C-s> <ESC>:w<CR>
 noremap <C-x><C-c> :confirm qa<CR>
 noremap! <C-x><C-c> <ESC>:confirm qa<CR>
 nnoremap <C-x>h ggVG
+nnoremap <C-a> ggVG
 nnoremap <C-x>1 :on<CR>
 nnoremap <C-x>0 :q<CR>
 " Pick leader key
 let mapleader="\<Space>"
 " Spacemacs like
-nnoremap <silent> <leader>fs :w<CR>
-nnoremap <silent> <leader>fS :wa<CR>
+" nnoremap <silent> <leader>fs :w<CR>
+" nnoremap <silent> <leader>fS :wa<CR>
 
 " nnoremap <C-s> mm:silent exec ":Format"<CR> <bar> :w<CR>`m
 " inoremap <C-s> <ESC>mm:silent exec ":Format"<CR> <bar> :w<CR>`m
