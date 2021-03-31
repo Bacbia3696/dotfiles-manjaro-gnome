@@ -61,9 +61,9 @@
   //diagnostic
   "diagnostic.enable": true,
   /* "diagnostic.enableSign": false, */
-  /* "diagnostic.errorSign": "🚫", */
-  /* "diagnostic.infoSign": "❗", */
-  /* "diagnostic.warningSign": "⚠", */
+  "diagnostic.errorSign": "",
+  "diagnostic.infoSign": "",
+  "diagnostic.warningSign": "",
   //coc-list
   "list.insertMappings": {
     "<C-v>": "eval:@+",
