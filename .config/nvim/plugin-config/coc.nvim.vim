@@ -10,7 +10,6 @@ let g:coc_global_extensions= [
     \ 'coc-html',
     \ 'coc-yaml',
     \ 'coc-yank',
-    \ 'coc-emoji',
     \ 'coc-terminal',
     \ 'coc-import-cost',
     \ 'coc-docker',
@@ -158,6 +157,7 @@ nnoremap <leader>cf :CocConfig<CR>
 nnoremap <leader>cs :CocCommand snippets.openSnippetFiles<CR>
 
 autocmd BufRead,BufNewFile *.go call coc#config('suggest', {'languageSourcePriority': 50})
+autocmd BufRead,BufNewFile Dockerfile call coc#config('suggest', {'languageSourcePriority': 200})
 
 
 

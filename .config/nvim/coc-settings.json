@@ -19,7 +19,6 @@
   /*   } */
   /* }, */
   "coc.preferences.floatActions": false,
-  /* "coc.source.emoji.filetypes": ["markdown", "gitcommit"], */
   "suggest.noselect": true,
   "suggest.triggerCompletionWait": 50,
   "suggest.maxPreviewWidth": 50,
@@ -62,7 +61,7 @@
   "diagnostic.enable": true,
   /* "diagnostic.enableSign": false, */
   "diagnostic.errorSign": "",
-  "diagnostic.infoSign": "",
+  "diagnostic.infoSign": "",
   "diagnostic.warningSign": "",
   //coc-list
   "list.insertMappings": {
@@ -85,6 +84,7 @@
   /* "coc.preferences.snippetStatusText": "Ⓢ ", */
   //CocList
   "list.source.grep.args": ["-S"],
+  "list.source.grep.excludePatterns": ["**/node_modules/**"],
   "list.source.files.excludePatterns": [
     "**/.git/**",
     "**/node_modules/**",
@@ -182,6 +182,7 @@
   // coc import cost
   "codeLens.enable": true,
   "javascript.referencesCodeLens.enable": false,
+  "typescript.referencesCodeLens.enable": false,
   "git.enableGutters": true,
   "clock.color": "#00ffff",
   "explorer.icon.customIcons": {
@@ -198,7 +199,9 @@
     "extensions": {
       "tmpl": "htmltmpl"
     },
-    "filenames": {},
+    "filenames": {
+      "tsconfig.json": "typescript"
+    },
     "dirnames": {
       "node_modules": "node_modules"
     },

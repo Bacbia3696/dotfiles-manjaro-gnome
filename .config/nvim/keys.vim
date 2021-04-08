@@ -22,7 +22,6 @@ noremap! <C-x><C-s> <ESC>:w<CR>
 noremap <C-x><C-c> :confirm qa<CR>
 noremap! <C-x><C-c> <ESC>:confirm qa<CR>
 nnoremap <C-x>h ggVG
-nnoremap <C-a> ggVG
 nnoremap <C-x>1 :on<CR>
 nnoremap <C-x>0 :q<CR>
 " Pick leader key

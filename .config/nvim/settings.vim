@@ -103,5 +103,6 @@ augroup rungroup
     autocmd BufRead,BufNewFile *.js nnoremap <F5> :exec '!node' shellescape(@%, 1)<cr>
     autocmd BufRead,BufNewFile *.py nnoremap <F5> :exec '!python' shellescape(@%, 1)<cr>
     autocmd BufRead,BufNewFile *.tex nnoremap <F5> :exec '!pdflatex' shellescape(@%, 1)<cr>
+    autocmd BufRead,BufNewFile *.sql nnoremap <F5> :!psql -Ugpp_dev -dgpp_db -p5431 -h127.0.0.1 -f %<cr>
     autocmd BufRead,BufNewFile *.vim nnoremap <F5> :source %<cr>
 augroup END
