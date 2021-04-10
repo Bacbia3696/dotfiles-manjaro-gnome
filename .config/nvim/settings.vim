@@ -1,4 +1,3 @@
-set clipboard=unnamedplus " use main clipboard
 set number relativenumber " show relative number
 set tabstop=4       " number of visual spaces per TAB
 set shiftwidth=4    " number of space move for 1 shift
@@ -89,11 +88,6 @@ augroup configgroup
     autocmd BufEnter *.{js,jsx,ts,tsx} :syntax sync fromstart
     autocmd BufLeave *.{js,jsx,ts,tsx} :syntax sync clear
     autocmd BufWritePre *.go :OR
-
-    " autocmd BufNewFile,BufRead *.tsx set filetype=typescriptreact
-    " autocmd BufWritePre *.ts,*.js :OR
-    " tsconfig.json is actually jsonc, help TypeScript set the correct filetype
-
 
 augroup END
 

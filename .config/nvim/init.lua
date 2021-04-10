@@ -30,6 +30,7 @@
 require('plugins')
 
 -- Main config
+require('settings')
 vim.cmd('source $HOME/.config/nvim/settings.vim')
 vim.cmd('source $HOME/.config/nvim/keys.vim')
 vim.cmd('source $HOME/.config/nvim/theme.vim')
