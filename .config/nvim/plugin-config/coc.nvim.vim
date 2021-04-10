@@ -14,6 +14,7 @@ let g:coc_global_extensions= [
     \ 'coc-import-cost',
     \ 'coc-docker',
     \ 'coc-webpack',
+    \ 'coc-lua',
     \ 'coc-highlight',
     \ 'coc-floatinput',
     \ 'coc-flutter-tools',
