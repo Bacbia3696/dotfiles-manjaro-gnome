@@ -16,7 +16,7 @@ inoremap <C-k> <C-o>D
 vnoremap <C-g> <C-c>
 onoremap <C-g> <C-c>
 noremap! <C-g> <C-c>
-nnoremap <C-x><C-f> :CocList files<CR>
+" nnoremap <C-x><C-f> :CocList files<CR>
 noremap <C-x><C-s> :w<CR>
 noremap! <C-x><C-s> <ESC>:w<CR>
 noremap <C-x><C-c> :confirm qa<CR>

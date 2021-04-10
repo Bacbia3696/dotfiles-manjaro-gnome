@@ -1,15 +1,16 @@
-set number relativenumber " show relative number
-set tabstop=4       " number of visual spaces per TAB
-set shiftwidth=4    " number of space move for 1 shift
-set expandtab       " tabs are spaces
-set wrap linebreak  " make break line
-set ignorecase smartcase " use smart case
+" set clipboard=unnamedplus " use main clipboard
+" set number relativenumber " show relative number
+" set tabstop=4       " number of visual spaces per TAB
+" set shiftwidth=4    " number of space move for 1 shift
+" set expandtab       " tabs are spaces
+" set wrap linebreak  " make break line
+" set ignorecase smartcase " use smart case
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pyc,*.db,*.sqlite
 let g:python3_host_prog="/home/dreamer/.pyenv/versions/nvim/bin/python" " set default python path
 " set pyx=3 " set pythonx
 " Remove delay time when switch to normal mode
-set timeoutlen=1000 ttimeoutlen=0 " Default for timeoutlen is 1000
-set history=1000
+" set timeoutlen=1000 ttimeoutlen=0 " Default for timeoutlen is 1000
+" set history=1000
 " Persistent undo
 let vimDir = '$HOME/.vim'
 let &runtimepath.=','.vimDir
@@ -21,15 +22,15 @@ if has('persistent_undo')
     let &undodir = myUndoDir
     set undofile
 endif
-set mouse=a " enable mouse support
-set hidden " allow open other buffer when current buffer is unsave
-set confirm " add dialog to ask when quit
+" set mouse=a " enable mouse support
+" set hidden " allow open other buffer when current buffer is unsave
+" set confirm " add dialog to ask when quit
 " Config for netrw
 let g:netrw_banner = 0
 let g:netrw_liststyle = 3
 let g:netrw_altv = 1
 let g:netrw_winsize = 25
-set nomodeline
+" set nomodeline
 
 " Easy expansion of the active file directory
 cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%'
@@ -60,13 +61,13 @@ autocmd FileType json syntax match Comment +\/\/.\+$+
 
 
 " Folding
-set foldlevelstart=10
-set foldnestmax=10
-set foldmethod=indent
+" set foldlevelstart=10
+" set foldnestmax=10
+" set foldmethod=indent
 
 " Split right and bellow
-set splitbelow
-set splitright
+" set splitbelow
+" set splitright
 
 " Auto group
 augroup configgroup

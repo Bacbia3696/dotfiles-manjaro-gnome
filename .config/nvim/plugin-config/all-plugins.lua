@@ -1,3 +1,6 @@
+vim.cmd [[ nnoremap <F2> :NvimTreeToggle<CR> ]]
+vim.api.nvim_exec(
+[[
 let g:AutoPairsShortcutBackInsert=""
 augroup autopair
     autocmd!
@@ -11,9 +14,11 @@ augroup autopair
     autocmd FileType tex         let b:AutoPairs = AutoPairsDefine({'$' : '$'})
 augroup end
 nnoremap <F4> :UndotreeToggle<cr>
+
 let g:closetag_filenames = "*.html,*.xhtml,*.phtml,*.php,*.jsx,*.tsx"
 let g:closetag_xhtml_filenames = "*.html,*.xhtml,*.phtml,*.php,*.jsx,*.tsx"
 
 let g:closetag_emptyTags_caseSensitive = 1
 let g:livepreview_cursorhold_recompile = 0
-autocmd FileType lisp let g:rainbow_active = 1
+]],
+false)

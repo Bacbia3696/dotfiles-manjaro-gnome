@@ -15,7 +15,6 @@ colorscheme srcery
 hi! link NonText SrceryWhite
 hi MatchParen cterm=bold ctermfg=233 ctermbg=208 gui=bold guifg=#ffbb88 guibg=#555599
 hi SrceryXGray3 guifg=#909090
-let g:airline_theme = 'dark'
 
 autocmd WinEnter,BufEnter * match SrceryXgray5 /	/
 
