@@ -24,12 +24,13 @@ vimp.nnoremap("<leader>q", "<Cmd>confirm qa<CR>")
 vimp.nnoremap("<leader>p", "`[v`]")
 
 vimp.nnoremap("<M-t>", "<Cmd>tabnew<CR>")
--- Fixme: convert this to lua latter
-vim.cmd [[
-for i in range(0,9) | execute 'noremap <silent> <M-'.i.'> :'.i."wincmd w<cr>" | endfor
-for i in range(0,9) | execute 'inoremap <silent> <M-'.i.'> <ESC>:'.i."wincmd w<cr>" | endfor
-for i in range(0,9) | execute 'tnoremap <silent> <M-'.i.'> <C-\><C-n>:'.i."wincmd w<cr>" | endfor
-]]
+
+for i=0,9 do
+	vimp.nnoremap('<M-'..i..'>', '<Cmd>'..i..'wincmd w<CR>')
+	vimp.inoremap('<M-'..i..'>', '<Cmd>'..i..'wincmd w<CR>')
+	vim.api.nvim_set_keymap('t', '<M-'..i..'>', '<Cmd>'..i..'wincmd w<CR>', {})
+end
+
 vimp.nnoremap("<M-j>", "gT")
 vimp.nnoremap("<M-k>", "gt")
 vimp.inoremap("<M-j>", "<ESC>gT")

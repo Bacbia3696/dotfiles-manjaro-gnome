@@ -7,8 +7,6 @@ vim.g.srcery_italic=1
 vim.g.srcery_transparent_background=1
 vim.g.srcery_inverse_matches=1
 
-local cmd = vim.cmd
-
 vim.cmd "colorscheme srcery"
 
 -- highlights --

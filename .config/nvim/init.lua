@@ -5,11 +5,9 @@ require 'settings.lua'
 require 'theme.lua'
 require "statusline.lua"
 require("colorizer").setup()
--- 
--- -- lsp
+-- lsp
 require "lspconfig.lua"
 require "compe.lua"
--- 
 require("treesitter.lua")
 require("mappings.lua")
 -- telescope stuff and popupmenu
