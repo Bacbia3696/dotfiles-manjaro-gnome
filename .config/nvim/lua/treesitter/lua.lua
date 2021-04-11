@@ -3,6 +3,7 @@ local ts_config = require("nvim-treesitter.configs")
 ts_config.setup {
     ensure_installed = {
         "javascript",
+        "typescript",
         "html",
         "css",
         "bash",
@@ -17,6 +18,6 @@ ts_config.setup {
     }
 }
 
-vim.cmd "hi NvimTreeFolderIcon guifg = #61afef"
-vim.cmd "hi NvimTreeFolderName guifg = #61afef"
-vim.cmd "hi NvimTreeIndentMarker guifg=#383c44"
+-- vim.cmd "hi NvimTreeFolderIcon guifg = #61afef"
+-- vim.cmd "hi NvimTreeFolderName guifg = #61afef"
+-- vim.cmd "hi NvimTreeIndentMarker guifg=#383c44"

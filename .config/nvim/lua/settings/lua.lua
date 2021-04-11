@@ -17,3 +17,59 @@ os.execute '[ ! -d "/tmp/.vim-undo-dir" ] && mkdir /tmp/.vim-undo-dir'
 vim.o.undodir = '/tmp/.vim-undo-dir'
 vim.o.undofile = true
 vim.bo.undofile = true
+
+vim.api.nvim_command([[
+" Disable auto indent when add commment //
+autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+
+" Return to last edit position when opening files (You want this!)
+autocmd BufReadPost *
+     \ if line("'\"") > 0 && line("'\"") <= line("$") |
+     \   exe "normal! g`\"" |
+     \ endif
+
+" check one time after 4s of inactivity in normal mode
+" set autoread
+" au CursorHold * checktime
+
+" For css
+autocmd FileType css,html,scss setlocal iskeyword+=-
+autocmd FileType css,html,scss setlocal iskeyword+=.
+
+" Highlight comment json
+autocmd FileType json syntax match Comment +\/\/.\+$+
+
+
+" Folding
+set foldlevelstart=10
+set foldnestmax=10
+set foldmethod=indent
+
+" Auto group
+augroup configgroup
+    autocmd!
+    autocmd BufRead,BufNewFile *.html,*.xml,*.ejs setlocal ts=2 sw=2
+    autocmd BufRead,BufNewFile *.dart setlocal ts=2 sw=2
+    autocmd BufRead,BufNewFile *.js,*jsx,*.json,*.ts,*.tsx setlocal ts=2 sw=2
+    autocmd BufRead,BufNewFile *.c,*.cpp,*.h setlocal ts=2 sw=2
+    autocmd BufRead,BufNewFile *.css,*.scss setlocal ts=2 sw=2
+    autocmd BufRead,BufNewFile *.cu setlocal ts=2 sw=2
+    autocmd BufRead,BufNewFile *.sh setlocal ts=2 sw=2
+    autocmd BufRead,BufNewFile Makefile setlocal noexpandtab
+    autocmd BufRead,BufNewFile .gitconfig setlocal noexpandtab
+    autocmd BufRead,BufNewFile *.go setlocal noexpandtab
+    autocmd BufRead,BufNewFile *.gohtml,*.tmpl set filetype=gohtmltmpl
+
+augroup END
+
+augroup rungroup
+    autocmd!
+    autocmd BufRead,BufNewFile *.go nnoremap <F5> :exec '!go run' shellescape(@%, 1)<cr>
+    autocmd BufRead,BufNewFile *.js nnoremap <F5> :exec '!node' shellescape(@%, 1)<cr>
+    autocmd BufRead,BufNewFile *.py nnoremap <F5> :exec '!python' shellescape(@%, 1)<cr>
+    autocmd BufRead,BufNewFile *.tex nnoremap <F5> :exec '!pdflatex' shellescape(@%, 1)<cr>
+    autocmd BufRead,BufNewFile *.sql nnoremap <F5> :!psql -Ugpp_dev -dgpp_db -p5431 -h127.0.0.1 -f %<cr>
+    autocmd BufRead,BufNewFile *.vim nnoremap <F5> :source %<cr>
+    autocmd BufRead,BufNewFile *.lua nnoremap <F5> :luafile %<cr>
+augroup END
+]])
