@@ -1,8 +1,8 @@
 vim.cmd [[ packadd vimpeccable ]]
-vimp = require('vimp')
+local vimp = require('vimp')
 
 vim.g.mapleader = " "
- 
+
 -- Emacs like behavior
 vimp.inoremap("<C-a>", "<Home>")
 vimp.inoremap("<C-e>", "<End>")
@@ -43,7 +43,8 @@ vimp.nnoremap("<leader>o", "<Cmd>!xdg-open %<CR>")
 vimp.nnoremap("<leader>O", "<Cmd>!xdg-open $(dirname %)<CR>")
 
 -- Easy expansion of the active file directory
-vim.cmd [[ cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%' ]]
+vim.api.nvim_set_keymap('c', '%%', "getcmdtype() == ':' ? expand('%:h').'/' : '%%'", { expr = true })
+
 -- Faster scrolling
 vimp.nnoremap({'override'}, "<C-y>", "3<C-y>")
 vimp.nnoremap({'override'}, "<C-e>", "3<C-e>")
