@@ -1,46 +1,31 @@
---================================================"
---                      ██                        "
---                     ░░                         "
---             ██    ██ ██ ██████████             "
---            ░██   ░██░██░░██░░██░░██            "
---            ░░██ ░██ ░██ ░██ ░██ ░██            "
---             ░░████  ░██ ░██ ░██ ░██            "
---              ░░██   ░██ ███ ░██ ░██            "
---               ░░    ░░ ░░░  ░░  ░░             "
---                                                "
---                  Nguyen Thanh Dat, 29/09/2019  "
---================================================"
---       \                                  ___-------___
---        \                             _-~~             ~~-_
---         \                         _-~                    /~-_
---                /^\__/^\         /~  \                   /    \
---              /|  O|| O|        /      \_______________/        \
---             | |___||__|      /       /                \          \
---             |          \    /      /                    \          \
---             |   (_______) /______/                        \_________ \
---             |         / /         \                      /            \
---              \         \^\\         \                  /               \     /
---                \         ||           \______________/      _-_       //\__//
---                  \       ||------_-~~-_ ------------- \ --/~   ~\    || __/
---                    ~-----||====/~     |==================|       |/~~~~~
---                     (_(__/  ./     /                    \_\      \.
---                            (_(___/                         \_____)_)
+-- load all plugins
+require "pluginsList.lua"
+require "file-icons.lua"
+require 'settings.lua'
+require 'theme.lua'
+require "statusline.lua"
+require("colorizer").setup()
+-- 
+-- -- lsp
+require "lspconfig.lua"
+require "compe.lua"
+-- 
+require("treesitter.lua")
+require("mappings.lua")
+-- telescope stuff and popupmenu
+require "telescope.lua"
+--  nvim tree color for folder name and icon
+require "nvimTree.lua"
+-- git signs
+require "gitsigns.lua"
+require("nvim-autopairs").setup()
+require("lspkind").init(
+    {
+        with_text = true,
+        symbol_map = {
+            Folder = ""
+        }
+    }
+)
 
--- Main config
-require('plugins')
-
--- Main config
-require('settings')
-vim.cmd('source $HOME/.config/nvim/settings.vim')
-require('keys')
-vim.cmd('source $HOME/.config/nvim/keys.vim')
-vim.cmd('source $HOME/.config/nvim/theme.vim')
-vim.cmd('source $HOME/.config/nvim/functions.vim')
-
--- Plugins config
--- vim.cmd('source $HOME/.config/nvim/plugin-config/coc.nvim.vim')
--- vim.cmd('source $HOME/.config/nvim/plugin-config/vim-airline.vim')
---vim.cmd('source $HOME/.config/nvim/plugin-config/all-plugins.vim')
-vim.cmd('luafile $HOME/.config/nvim/plugin-config/all-plugins.lua')
-
-require('lsp.lua-ls')
+require('nvim_comment').setup()

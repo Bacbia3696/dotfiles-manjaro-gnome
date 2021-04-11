@@ -1,8 +1,0 @@
-{
-  "html": {
-    "snippets": {
-      "svg": "svg.$1>use[xlink:href=${2:path}#${3:id}]"
-    }
-  }
-}
-
