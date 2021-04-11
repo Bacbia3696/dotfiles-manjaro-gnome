@@ -106,3 +106,6 @@ augroup rungroup
     autocmd BufRead,BufNewFile *.vim nnoremap <F5> :source %<cr>
 augroup END
 ]])
+
+
+vim.api.nvim_set_keymap("n", "<Leader>fm", [[<Cmd> Neoformat<CR>]], {noremap = true, silent = true})

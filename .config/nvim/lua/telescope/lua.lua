@@ -44,7 +44,7 @@ require("telescope").setup {
         grep_previewer = require "telescope.previewers".vim_buffer_vimgrep.new,
         qflist_previewer = require "telescope.previewers".vim_buffer_qflist.new,
         -- Developer configurations: Not meant for general override
-        buffer_previewer_maker = require "telescope.previewers".buffer_previewer_maker
+        buffer_previewer_maker = require "telescope.previewers".buffer_previewer_maker,
     },
     extensions = {
         media_files = {
@@ -62,6 +62,7 @@ vim.g.mapleader = " "
 
 -- mappings
 vim.api.nvim_set_keymap("n", "<Leader>ff", [[<Cmd>lua require('telescope.builtin').find_files()<CR>]], opt)
+vim.api.nvim_set_keymap("n", "<Leader>fg", [[<Cmd>lua require('telescope.builtin').live_grep()<CR>]], opt)
 vim.api.nvim_set_keymap(
     "n",
     "<Leader>fp",
@@ -72,7 +73,6 @@ vim.api.nvim_set_keymap(
 vim.api.nvim_set_keymap("n", "<Leader>fb", [[<Cmd>lua require('telescope.builtin').buffers()<CR>]], opt)
 vim.api.nvim_set_keymap("n", "<Leader>fh", [[<Cmd>lua require('telescope.builtin').help_tags()<CR>]], opt)
 vim.api.nvim_set_keymap("n", "<Leader>fo", [[<Cmd>lua require('telescope.builtin').oldfiles()<CR>]], opt)
-vim.api.nvim_set_keymap("n", "<Leader>fm", [[<Cmd> Neoformat<CR>]], opt)
 
 
 vim.cmd "hi TelescopeBorder   guifg=#2a2e36"

@@ -5,10 +5,10 @@ local nvim_lsp = require("lspconfig")
 
 local function on_attach(client)
     local function buf_set_keymap(...)
-        vim.api.nvim_buf_set_keymap(bufnr, ...)
+        vim.api.nvim_buf_set_keymap(0, ...)
     end
     local function buf_set_option(...)
-        vim.api.nvim_buf_set_option(bufnr, ...)
+        vim.api.nvim_buf_set_option(0, ...)
     end
 
     buf_set_option("omnifunc", "v:lua.vim.lsp.omnifunc")
@@ -44,14 +44,19 @@ for _, lsp in ipairs(servers) do
     nvim_lsp[lsp].setup {on_attach = on_attach}
 end
 
-require'lspconfig'.gopls.setup{
-		on_attach = on_attach
+nvim_lsp.gopls.setup{
+  on_attach = on_attach
+}
+
+nvim_lsp.tsserver.setup{
+  on_attach = on_attach
 }
 
 local sumneko_root_path = vim.fn.stdpath('data')..'/lspinstall/lua/sumneko-lua/extension/server'
 local sumneko_binary = sumneko_root_path.."/bin/Linux/lua-language-server"
-require'lspconfig'.sumneko_lua.setup {
+nvim_lsp.sumneko_lua.setup {
   cmd = {sumneko_binary, "-E", sumneko_root_path .. "/main.lua"};
+  on_attach = on_attach;
   settings = {
     Lua = {
       runtime = {

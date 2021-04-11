@@ -19,10 +19,10 @@ g.nvim_tree_git_hl = 1
 g.nvim_tree_root_folder_modifier = ':~'
 g.nvim_tree_tab_open = 1
 g.nvim_tree_width_allow_resize  = 1
-g.nvim_tree_disable_netrw = 0
-g.nvim_tree_hijack_netrw = 0
+g.nvim_tree_disable_netrw = 1
+g.nvim_tree_hijack_netrw = 1
 g.nvim_tree_add_trailing = 1
-g.nvim_tree_group_empty = 1
+g.nvim_tree_group_empty = 0
 g.nvim_tree_lsp_diagnostics = 1
 
 g.nvim_tree_show_icons = {
