@@ -30,9 +30,8 @@ vimp.inoremap("<C-k>", "<C-o>D")
 
 vimp.nnoremap("<C-x>h", "ggVG")
 
-vimp.nnoremap("<leader><leader>", "<Cmd>nohl<CR>")
+vimp.nnoremap("<leader>n", "<Cmd>nohl<CR>")
 vimp.nnoremap("<leader>q", "<Cmd>confirm qa<CR>")
-vimp.nnoremap("<leader>p", "`[v`]")
 
 vimp.nnoremap("<M-t>", "<Cmd>tabnew<CR>")
 
