@@ -1,0 +1,83 @@
+# This is Git's per-user configuration file.
+[user]
+	email = bacbia3696@gmail.com
+	name = "Nguyen Thanh Dat"
+[core]
+	editor = nvim
+	pager = diff-so-fancy | less --tabs=4 -RFX
+	excludesfile = /home/dreamer/.gitignore_global
+[alias]
+	a = add
+	aa = add -A
+	ae = add -e
+	ai = add -i
+	al = !git config --get-regexp ^alias\\. | sed -e s/^alias.// -e s/\\ /\\ $(printf \"\\043\")--\\>\\ / | column -t -s $(printf \"\\043\") | sort -k 1
+	ap = add -p
+	au = add -u
+	b = branch
+	ba = branch -a
+	c = commit
+	cam = commit -am
+	cfix = commit --amend
+	cl = clone
+	clf = clean -f
+	cln = clean -n
+	cm = commit -m
+	d = diff
+	dh = diff HEAD
+	ds = diff --staged
+	f = fetch
+	i = init
+	ib = init --bare
+	k = checkout
+	kb = checkout -b
+	kt = checkout -t
+	l = log
+	lg = log --graph --oneline --all --decorate
+	lo = log --oneline
+	ls = ls-files
+	m = merge
+	n = init
+	o = show
+	p = push
+	pf = push --force
+	rb = rebase
+	rmc = rm --cached
+	rs = reset
+	rt = restore
+	rv = revert
+	s = status
+	ss = stash
+	u = pull
+	root = !pwd
+    patch = !git --no-pager diff --no-color
+[mergetool "vimdiff3"]
+	cmd = nvim -d $LOCAL $MERGED $REMOTE -c 'wincmd w' -c 'wincmd J'
+[mergetool "vimdiff2"]
+	cmd = nvim -d $LOCAL $REMOTE
+[merge]
+	tool = vimdiff3
+[mergetool]
+	prompt = true
+[difftool]
+	prompt = false
+[diff]
+	tool = vimdiff2
+[color]
+	ui = true
+[color "diff-highlight"]
+	oldNormal = red bold
+	oldHighlight = red bold 52
+	newNormal = green bold
+	newHighlight = green bold 22
+[color "diff"]
+	meta = 11
+	frag = magenta bold
+	commit = yellow bold
+	old = red bold
+	new = green bold
+	whitespace = red reverse
+[pull]
+	rebase = false
+[init]
+	defaultBranch = master
