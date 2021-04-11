@@ -8,7 +8,8 @@ ts_config.setup {
         "bash",
         "cpp",
         "rust",
-        "lua"
+        "lua",
+		"go",
     },
     highlight = {
         enable = true,

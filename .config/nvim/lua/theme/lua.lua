@@ -1,4 +1,6 @@
--- "↵,→,~,↷,↶,·,¬,⇨,⋄,‸,⇥,➜,⟫,➪,➭
+--↵,→,~,↷,↶,·,¬,⇨,⋄,‸,⇥,➜,⟫,➪,➭,⚬,⮐
+vim.o.listchars = "tab:➪ ,trail:⚬,eol:⮐"
+vim.wo.list = true
 
 vim.o.termguicolors = true
 vim.wo.cursorline = true
@@ -25,7 +27,7 @@ vim.api.nvim_exec([[
 ]], false)
 
 -- inactive statuslines as thin splitlines
-vim.cmd("highlight! StatusLineNC gui=underline guibg=NONE guifg=#383c44")
+-- vim.cmd("highlight! StatusLineNC gui=underline guibg=NONE guifg=#383c44")
 
-vim.cmd "hi clear CursorLine"
-vim.cmd "hi cursorlinenr guibg=NONE guifg=#abb2bf"
+-- vim.cmd "hi clear CursorLine"
+-- vim.cmd "hi cursorlinenr guibg=NONE guifg=#abb2bf"

@@ -18,6 +18,7 @@ return require("packer").startup(
     use 'kyazdani42/nvim-tree.lua'
     use 'glepnir/galaxyline.nvim'
 
+	use 'sheerun/vim-polyglot'
 	use 'metakirby5/codi.vim'
 	use 'terrortylor/nvim-comment'
     use 'nvim-lua/plenary.nvim'

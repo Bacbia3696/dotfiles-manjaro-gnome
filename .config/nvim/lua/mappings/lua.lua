@@ -1,6 +1,17 @@
 vim.cmd [[ packadd vimpeccable ]]
 local vimp = require('vimp')
 
+-- Change default behavior, hide which key typed
+vimp.nnoremap({'repeatable'}, "k", "gk")
+vimp.nnoremap({'repeatable'}, "j", "gj")
+vimp.nnoremap({'repeatable'}, "0", "g0")
+vimp.nnoremap({'repeatable'}, "$", "g$")
+vimp.nnoremap({'repeatable'}, "<C-d>", "<C-d>")
+vimp.nnoremap({'repeatable'}, "<C-u>", "<C-u>")
+-- Faster scrolling
+vimp.nnoremap({'override', 'repeatable'}, "<C-y>", "3<C-y>")
+vimp.nnoremap({'override', 'repeatable'}, "<C-e>", "3<C-e>")
+
 vim.g.mapleader = " "
 
 -- Emacs like behavior
@@ -44,10 +55,6 @@ vimp.nnoremap("<leader>O", "<Cmd>!xdg-open $(dirname %)<CR>")
 
 -- Easy expansion of the active file directory
 vim.api.nvim_set_keymap('c', '%%', "getcmdtype() == ':' ? expand('%:h').'/' : '%%'", { expr = true })
-
--- Faster scrolling
-vimp.nnoremap({'override'}, "<C-y>", "3<C-y>")
-vimp.nnoremap({'override'}, "<C-e>", "3<C-e>")
 
 vimp.nnoremap("<C-s>", "<Cmd>Neoformat<CR><Cmd>write<CR>")
 vimp.inoremap("<C-s>", "<ESC><Cmd>Neoformat<CR><Cmd>write<CR>")
