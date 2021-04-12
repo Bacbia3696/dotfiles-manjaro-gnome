@@ -4,23 +4,27 @@ return require("packer").startup(
     use {'wbthomason/packer.nvim'}
 
     use {'svermeulen/vimpeccable', opt = true}
-	use 'tjdevries/nlua.nvim'
+    use 'tjdevries/nlua.nvim'
 
-	use 'tpope/vim-surround'
-	use 'tpope/vim-repeat'
+    use 'tpope/vim-surround'
+    use 'tpope/vim-repeat'
 
     use 'neovim/nvim-lspconfig'
-	use 'kabouzeid/nvim-lspinstall'
+    use 'kabouzeid/nvim-lspinstall'
     use 'hrsh7th/nvim-compe'
 
-	use 'srcery-colors/srcery-vim'
+    use 'srcery-colors/srcery-vim'
     use 'kyazdani42/nvim-web-devicons'
     use 'kyazdani42/nvim-tree.lua'
     use 'glepnir/galaxyline.nvim'
+    use 'glepnir/dashboard-nvim'
 
-	use 'sheerun/vim-polyglot'
-	use 'metakirby5/codi.vim'
-	use 'terrortylor/nvim-comment'
+    use 'hrsh7th/vim-vsnip'
+    use 'hrsh7th/vim-vsnip-integ'
+
+    use 'sheerun/vim-polyglot'
+    use 'metakirby5/codi.vim'
+    use 'terrortylor/nvim-comment'
     use 'nvim-lua/plenary.nvim'
     use 'lewis6991/gitsigns.nvim'
     use 'nvim-treesitter/nvim-treesitter'

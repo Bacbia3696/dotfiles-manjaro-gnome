@@ -44,12 +44,17 @@ for _, lsp in ipairs(servers) do
     nvim_lsp[lsp].setup {on_attach = on_attach}
 end
 
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities.textDocument.completion.completionItem.snippetSupport = true
+
 nvim_lsp.gopls.setup{
-  on_attach = on_attach
+  on_attach = on_attach;
+  capabilities = capabilities;
 }
 
 nvim_lsp.tsserver.setup{
-  on_attach = on_attach
+  on_attach = on_attach;
+  capabilities = capabilities;
 }
 
 local sumneko_root_path = vim.fn.stdpath('data')..'/lspinstall/lua/sumneko-lua/extension/server'
@@ -57,6 +62,7 @@ local sumneko_binary = sumneko_root_path.."/bin/Linux/lua-language-server"
 nvim_lsp.sumneko_lua.setup {
   cmd = {sumneko_binary, "-E", sumneko_root_path .. "/main.lua"};
   on_attach = on_attach;
+  capabilities = capabilities;
   settings = {
     Lua = {
       runtime = {
