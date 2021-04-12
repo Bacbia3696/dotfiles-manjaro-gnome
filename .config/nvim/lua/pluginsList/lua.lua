@@ -9,6 +9,8 @@ return require("packer").startup(
 
     use 'tpope/vim-surround'
     use 'tpope/vim-repeat'
+    use 'ludovicchabant/vim-gutentags'
+
 
     use 'neovim/nvim-lspconfig'
     use 'kabouzeid/nvim-lspinstall'
@@ -17,6 +19,7 @@ return require("packer").startup(
     use 'sbdchd/neoformat'
     use 'terrortylor/nvim-comment'
     use 'sheerun/vim-polyglot'
+    use 'nanotee/sqls.nvim'
 
     use 'srcery-colors/srcery-vim'
     use 'kyazdani42/nvim-web-devicons'

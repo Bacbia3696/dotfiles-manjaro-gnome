@@ -19,6 +19,8 @@ vimp.inoremap("<C-a>", "<Home>")
 vimp.inoremap("<C-e>", "<End>")
 vimp.inoremap("<C-f>", "<Right>")
 vimp.inoremap("<C-b>", "<Left>")
+vimp.cnoremap("<C-a>", "<Home>")
+
 vimp.inoremap("<C-p>", "<Up>")
 vimp.inoremap("<C-n>", "<Down>")
 vimp.inoremap("<M-BS>", "<C-w>")
@@ -105,6 +107,3 @@ augroup rungroup
     autocmd BufRead,BufNewFile *.vim nnoremap <F5> :source %<cr>
 augroup END
 ]])
-
-
-vim.api.nvim_set_keymap("n", "<Leader>fm", [[<Cmd> Neoformat<CR>]], {noremap = true, silent = true})

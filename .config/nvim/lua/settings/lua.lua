@@ -14,6 +14,9 @@ vim.o.confirm = true
 vim.o.foldlevelstart = 10
 vim.wo.foldnestmax = 10
 vim.wo.foldmethod = 'indent'
+-- vim.wo.foldnestmax = 5
+-- vim.wo.foldmethod = 'expr'
+-- vim.wo.foldexpr = 'nvim_treesitter#foldexpr()'
 
 -- persist undo
 os.execute '[ ! -d "/tmp/.vim-undo-dir" ] && mkdir /tmp/.vim-undo-dir'

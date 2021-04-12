@@ -10,14 +10,22 @@ ts_config.setup {
         "cpp",
         "rust",
         "lua",
-		"go",
+        "go",
     },
     highlight = {
         enable = true,
         use_languagetree = true
+    },
+    incremental_selection = {
+      enable = true,
+      keymaps = {
+        init_selection = "gnn",
+        node_incremental = "grn",
+        scope_incremental = "grc",
+        node_decremental = "grm",
+      },
+    },
+    indent = {
+      enable = true
     }
 }
-
--- vim.cmd "hi NvimTreeFolderIcon guifg = #61afef"
--- vim.cmd "hi NvimTreeFolderName guifg = #61afef"
--- vim.cmd "hi NvimTreeIndentMarker guifg=#383c44"

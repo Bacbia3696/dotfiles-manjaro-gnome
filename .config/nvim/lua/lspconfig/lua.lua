@@ -33,9 +33,9 @@ local function on_attach(client)
 
     -- Set some keybinds conditional on server capabilities
     if client.resolved_capabilities.document_formatting then
-        buf_set_keymap("n", "<space>f", "<cmd>lua vim.lsp.buf.formatting()<CR>", opts)
+        buf_set_keymap("n", "<space>F", "<cmd>lua vim.lsp.buf.formatting()<CR>", opts)
     elseif client.resolved_capabilities.document_range_formatting then
-        buf_set_keymap("n", "<space>f", "<cmd>lua vim.lsp.buf.range_formatting()<CR>", opts)
+        buf_set_keymap("n", "<space>F", "<cmd>lua vim.lsp.buf.range_formatting()<CR>", opts)
     end
 end
 
@@ -88,4 +88,17 @@ nvim_lsp.sumneko_lua.setup {
       },
     },
   },
+}
+
+require'lspconfig'.sqls.setup{
+    on_attach = function(client)
+        client.resolved_capabilities.execute_command = true;
+        require'sqls'.setup{
+          picker = 'telescope',
+        };
+
+    vim.api.nvim_buf_set_keymap(0, "n", "K", "<Cmd>lua vim.lsp.buf.hover()<CR>",
+      {noremap = true, silent = true})
+
+    end
 }
