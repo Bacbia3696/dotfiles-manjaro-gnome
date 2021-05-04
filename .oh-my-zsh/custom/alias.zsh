@@ -1,7 +1,6 @@
 alias q=exit
 alias o="xdg-open"
 alias e="nvim 2> /dev/null"
-alias eS="nvim -S"
 alias se=sudoedit
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias gd=dotfiles
@@ -17,12 +16,9 @@ alias pyclean='find . -type d -name __pycache__ -exec rm -rf {} +'
 # edit config file
 alias egf="e $HOME/.gitconfig"
 alias evf="e $HOME/.config/nvim/init.lua"
-alias ecf="e $HOME/.config/nvim/coc-settings.json"
 alias ekf="e $HOME/.config/kitty/kitty.conf"
-alias eaf="e $HOME/.config/alacritty/alacritty.yml"
-alias elf="e $HOME/.oh-my-zsh/custom/alias.zsh"
+alias eaf="e $HOME/.oh-my-zsh/custom/alias.zsh"
 alias eef="e $HOME/.oh-my-zsh/custom/env.zsh"
-alias esf="e $HOME/my-tmp/silly.md"
 
 # nmp
 alias ns="npm start"
@@ -35,7 +31,7 @@ alias nli="npm list --depth=0"
 
 # cd to git root dir
 alias cdg='cd $(git root)'
-alias cdv="cd $HOME/.config/nvim"
-alias cdz="cd $HOME/.oh-my-zsh/custom"
+alias cdn="cd $HOME/.config/nvim"
+alias cdo="cd $HOME/.oh-my-zsh/custom"
 alias cdc="cd $HOME/.config"
 
