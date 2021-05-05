@@ -81,3 +81,5 @@
 	rebase = false
 [init]
 	defaultBranch = main
+[url "https://gitlab-ci-token:1HeV2JEGVW5S1U5qbbFK@gitlab.sendo.vn/"]
+	insteadOf = https://gitlab.sendo.vn/
