@@ -1,11 +1,11 @@
 # This is Git's per-user configuration file.
 [user]
-	email = bacbia3696@gmail.com
+	email = datnt4@sendo.vn
 	name = "Nguyen Thanh Dat"
 [core]
 	editor = nvim
 	pager = diff-so-fancy | less --tabs=4 -RFX
-	excludesfile = /home/dreamer/.gitignore_global
+	excludesfile = ~/.gitignore_global
 [alias]
 	a = add
 	aa = add -A
