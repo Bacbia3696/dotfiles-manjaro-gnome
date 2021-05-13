@@ -83,3 +83,5 @@
 	defaultBranch = main
 [url "https://gitlab-ci-token:1HeV2JEGVW5S1U5qbbFK@gitlab.sendo.vn/"]
 	insteadOf = https://gitlab.sendo.vn/
+[url "https://gitlab-ci-token:AC-Lx_V7FjE28GxyzL63@gitlab.com/"]
+	insteadOf = https://gitlab.com/

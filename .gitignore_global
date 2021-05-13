@@ -1,3 +1,4 @@
 tags
 node_modules/
 .projections.json
+.air.toml
