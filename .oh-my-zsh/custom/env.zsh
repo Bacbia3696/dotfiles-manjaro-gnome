@@ -1,4 +1,4 @@
-export PROMPT_EOL_MARK='🔚'
+export PROMPT_EOL_MARK=''
 
 # For pyenv
 export PATH="$HOME/.pyenv/bin:$PATH"
