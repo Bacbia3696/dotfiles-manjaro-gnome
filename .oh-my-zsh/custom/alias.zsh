@@ -1,6 +1,6 @@
 alias q=exit
 alias o="xdg-open"
-alias e="nvim 2> /dev/null"
+alias e="nvim"
 alias se=sudoedit
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias gd=dotfiles
